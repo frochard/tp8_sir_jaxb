@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<enchereTypeImpl>
+    <prix>500000</prix>
+    <propriétaire>
+        <Nom>Bond</Nom>
+        <Prenom>James</Prenom>
+        <Login>007</Login>
+        <Mail>007@enchere.org</Mail>
+    </propriétaire>
+    <MeilleurPrix>3100000</MeilleurPrix>
+    <Titre>Aston Martin DB10</Titre>
+    <Descriptif> L'unique exemplaire de Aston Martin DB10 utilisé dans Spectre. </Descriptif>
+</enchereTypeImpl>

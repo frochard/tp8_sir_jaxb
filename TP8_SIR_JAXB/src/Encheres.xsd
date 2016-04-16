@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp1 U (http://www.altova.com) by barais (EMBRACE) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"  jaxb:version="2.0" jaxb:extensionBindingPrefixes="xjc">
+<xs:annotation>
+        <xs:appinfo>
+        <jaxb:globalBindings generateValueClass="false"/>  
+        </xs:appinfo>
+    </xs:annotation>
+	<xs:element name="Site">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Enchere" type="EnchereType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="EnchereType">
+		<xs:sequence>
+			<xs:element name="prix" type="xs:int"/>
+			<xs:element name="propriétaire" type="PersonneType"/>
+			<xs:element name="MeilleurPrix" type="xs:string"/>
+			<xs:element name="Titre" type="xs:string"/>
+			<xs:element name="Descriptif" type="xs:string"/>
+			<xs:element name="Etat" type="EtatEcnchere"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PersonneType">
+		<xs:sequence>
+			<xs:element name="Nom" type="xs:string"/>
+			<xs:element name="Prenom" type="xs:string"/>
+			<xs:element name="Login" type="xs:string"/>
+			<xs:element name="Mail" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="EtatEcnchere">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ouvert"/>
+			<xs:enumeration value="fermé"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
